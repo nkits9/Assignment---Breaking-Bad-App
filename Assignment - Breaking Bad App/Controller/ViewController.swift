@@ -19,10 +19,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         table.delegate = self
         table.dataSource = self
         table.register(UINib.init(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
-                
-        getBreakingBadData {
-            print("Error Fetching Data")
-        } completionForResponse: { (BBCharacters) in
+                        
+        getBreakingBadData { (BBCharacters) in
             DispatchQueue.main.async {
                 self.allCharacters = BBCharacters
                 self.table.reloadData()

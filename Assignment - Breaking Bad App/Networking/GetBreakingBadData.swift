@@ -7,7 +7,7 @@
 
 import UIKit
 
-func getBreakingBadData(completionForError: @escaping ()-> Void, completionForResponse: @escaping (_ characters: [BBCharacter]) -> Void) {
+func getBreakingBadData(completionForResponse: @escaping (_ characters: [BBCharacter]) -> Void) {
     
     var BBCharacters = [BBCharacter]()
     
@@ -44,7 +44,7 @@ func getBreakingBadData(completionForError: @escaping ()-> Void, completionForRe
             return
         }
         
-        print("✅ ", parsedResult, " ✅")
+//        print("✅ ", parsedResult, " ✅")
     
 
         for character in parsedResult {
